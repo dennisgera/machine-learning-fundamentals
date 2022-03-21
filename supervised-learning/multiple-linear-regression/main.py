@@ -1,16 +1,22 @@
 import pandas as pd
-import numpy as np
+import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 # load and investigate the data here:
-tennis = pd.read_csv('supervised-learning/Multiple Linear Regression/tennis_stats.csv')
+tennis = pd.read_csv('supervised-learning/multiple-linear-regression/tennis_stats.csv')
 print(tennis.columns)
 print(tennis.info())
 print(tennis.head())
 
 # perform exploratory analysis here:
+# get heatmap of correlated features
+corr_grid = tennis.corr()
+sns.heatmap(corr_grid, xticklabels = corr_grid.columns, yticklabels = corr_grid.columns, vmin = -1, center =0, vmax = 1, annot=False, cmap='Blues')
+plt.show()
+
+# plot highly correlated feature to winnings outcome
 plt.plot(tennis['ServiceGamesWon'], tennis['Winnings'], 'o')
 plt.xlabel('ServiceGamesWon')
 plt.ylabel('Winnings')
