@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-#import data
+## import data
 reviews = pd.read_csv('feature-engineering/reviews.csv')
  
 #print column names
