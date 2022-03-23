@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import RFE
 
-# Load the data
+# Load the obesity data
 obesity = pd.read_csv("feature-engineering/wrapper-methods/obesity.csv")
 
 # Inspect the data
