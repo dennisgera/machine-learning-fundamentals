@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import train_test_split
-import codecademylib3
 import matplotlib.pyplot as plt
 import seaborn as sns
 
